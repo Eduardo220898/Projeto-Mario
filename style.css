@@ -1,4 +1,4 @@
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,11 +25,11 @@ button {
 
 }
 
-button:hover{
+button:hover {
 
     opacity: 0.6;
     width: 230px;
-    transition: 0.5s ease-in-out ;
+    transition: 0.5s ease-in-out;
 }
 
 .imagem-mario-luigi {
@@ -37,29 +37,37 @@ button:hover{
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     height: 100vh;
-    padding: 100px;
 
 
 }
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+}
+
 .sobre-nos {
     width: 40%;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+
 .video {
     position: fixed;
     z-index: -1;
+    top: 0;
 
 }
-video { 
+
+video {
     width: 100vw;
 
 }
+
 .mascara {
     height: 100%;
     width: 100%;
@@ -67,6 +75,7 @@ video {
     position: fixed;
     top: 0;
 }
+
 .whatsapp img {
     height: 80px;
     position: fixed;
@@ -74,21 +83,21 @@ video {
     bottom: 20px;
 }
 
-.whatsapp img:hover{
+.whatsapp img:hover {
 
     height: 70px;
     transition: 0.5s ease-in-out;
 }
 
 .header {
- display: flex;
- align-items: center;
- top: 0;
- left: 30px;
- gap: 30px;
- margin: 30px;
- position: fixed;
- cursor: pointer;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 30px;
+    gap: 30px;
+    margin: 30px;
+    position: fixed;
+    cursor: pointer;
 
 }
 
@@ -150,5 +159,46 @@ textarea {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-    transition: visibility 0.5s ease-in-out ;
+    transition: visibility 0.5s ease-in-out;
+}
+
+@media(max-width: 1100px){
+    video{
+        display: none;
+    }
+
+    .caixa-mae{
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        height: 150vh;
+        width: 100vw;
+        flex-direction: column;
+        padding: 10px;
+        top: 20%;
+    }
+
+    p {
+        display: none;
+    }
+    .sobre-nos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        top: 50%;
+    }
+    .header {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .header a {
+        font-size: 18px;
+    }
+    .imagem-mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+    .header img {
+        display: none;
+    }
+
 }
